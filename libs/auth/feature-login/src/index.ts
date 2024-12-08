@@ -1,1 +1,1 @@
-export * from './lib/feature-login/feature-login.component';
+export * from './feature-login/feature-login.component';

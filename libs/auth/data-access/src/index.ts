@@ -1,1 +1,1 @@
-export * from './lib/data-access/data-access.component';
+export * from './data-access/data-access.component';

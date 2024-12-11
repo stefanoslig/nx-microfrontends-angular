@@ -1,8 +1,14 @@
-import { ApiService } from '@realworld/core/http-client';
-import { User, UserResponse } from '@realworld/core/api-types';
+import { ApiService } from '@nx-microfrontends-angular/http-client';
+import {
+  User,
+  UserResponse,
+  LoginUser,
+  LoginUserRequest,
+  NewUserRequest,
+  NewUser,
+} from '@nx-microfrontends-angular/api-types';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
-import { LoginUser, LoginUserRequest, NewUserRequest, NewUser } from '@realworld/core/api-types';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {

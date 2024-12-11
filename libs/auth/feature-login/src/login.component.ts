@@ -1,17 +1,18 @@
-import { InputErrorsComponent, ListErrorsComponent } from '@realworld/core/forms';
+import { InputErrorsComponent, ListErrorsComponent } from '@nx-microfrontends-angular/forms';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { AuthStore } from '@realworld/auth/data-access';
+import { AuthStoreService } from '@nx-microfrontends-angular/auth-data-access';
 
 @Component({
+  standalone: true,
   selector: 'cdt-login',
   templateUrl: './login.component.html',
   imports: [ListErrorsComponent, RouterLink, ReactiveFormsModule, InputErrorsComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent {
-  private readonly authStore = inject(AuthStore);
+  private readonly authStore = inject(AuthStoreService);
   private readonly fb = inject(FormBuilder);
 
   form = this.fb.nonNullable.group({
@@ -20,7 +21,7 @@ export class LoginComponent {
   });
 
   onSubmit() {
-    this.authStore.login(this.form.getRawValue());
+    // this.authStore.login(this.form.getRawValue());
     this.form.reset();
   }
 }

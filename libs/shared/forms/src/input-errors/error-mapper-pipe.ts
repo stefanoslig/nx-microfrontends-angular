@@ -2,6 +2,7 @@ import { inject, Pipe, PipeTransform } from '@angular/core';
 import { VALIDATION_ERROR_MESSAGES } from './error-messages';
 
 @Pipe({
+  standalone: true,
   name: 'errorMapper',
 })
 export class ErrorMapperPipe implements PipeTransform {

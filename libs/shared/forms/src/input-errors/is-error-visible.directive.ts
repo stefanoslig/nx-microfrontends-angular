@@ -3,6 +3,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { AbstractControl } from '@angular/forms';
 
 @Directive({
+  standalone: true,
   selector: '[isErrorVisible]',
 })
 export class IsErrorVisibleDirective implements AfterViewInit {

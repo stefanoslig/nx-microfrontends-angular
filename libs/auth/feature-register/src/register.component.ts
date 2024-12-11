@@ -1,10 +1,11 @@
-import { InputErrorsComponent, ListErrorsComponent } from '@realworld/core/forms';
+import { InputErrorsComponent, ListErrorsComponent } from '@nx-microfrontends-angular/forms';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AuthStore } from '@realworld/auth/data-access';
+import { AuthStoreService } from '@nx-microfrontends-angular/auth-data-access';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
+  standalone: true,
   selector: 'cdt-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
@@ -12,7 +13,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RegisterComponent {
-  private readonly authStore = inject(AuthStore);
+  private readonly authStore = inject(AuthStoreService);
   private readonly fb = inject(FormBuilder);
 
   form = this.fb.nonNullable.group({
@@ -22,7 +23,7 @@ export class RegisterComponent {
   });
 
   onSubmit() {
-    this.authStore.register(this.form.getRawValue());
+    // this.authStore.register(this.form.getRawValue());
     this.form.reset();
   }
 }

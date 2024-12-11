@@ -1,15 +1,16 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/core';
-import { FormErrorsStore } from '../forms-errors.store';
+// import { FormErrorsStore } from '../forms-errors.store';
 
 @Component({
+  standalone: true,
   selector: 'cdt-list-errors',
   templateUrl: './list-errors.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ListErrorsComponent implements OnDestroy {
-  protected readonly formErrorsStore = inject(FormErrorsStore);
+  // protected readonly formErrorsStore = inject(FormErrorsStore);
 
   ngOnDestroy() {
-    this.formErrorsStore.setErrors({});
+    // this.formErrorsStore.setErrors({});
   }
 }

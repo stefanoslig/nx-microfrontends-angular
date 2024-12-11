@@ -15,17 +15,27 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-microfrontends-angular/api-types": [
+        "libs/shared/api-types/src/index.ts"
+      ],
       "@nx-microfrontends-angular/auth-data-access": [
         "libs/shared/auth-data-access/src/index.ts"
       ],
       "@nx-microfrontends-angular/data-access": [
         "libs/auth/data-access/src/index.ts"
       ],
+      "@nx-microfrontends-angular/error-handler": [
+        "libs/shared/error-handler/src/index.ts"
+      ],
       "@nx-microfrontends-angular/feature-login": [
         "libs/auth/feature-login/src/index.ts"
       ],
       "@nx-microfrontends-angular/feature-register": [
         "libs/auth/feature-register/src/index.ts"
+      ],
+      "@nx-microfrontends-angular/forms": ["libs/shared/forms/src/index.ts"],
+      "@nx-microfrontends-angular/http-client": [
+        "libs/shared/http-client/src/index.ts"
       ],
       "auth/Routes": ["apps/auth/src/app/remote-entry/entry.routes.ts"]
     }

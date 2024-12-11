@@ -1,1 +1,1 @@
-export * from './feature-register/feature-register.component';
+export * from './register.component';

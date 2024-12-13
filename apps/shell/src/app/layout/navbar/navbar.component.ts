@@ -3,8 +3,7 @@ import { RouterModule } from '@angular/router';
 import { User } from '@nx-microfrontends-angular/api-types';
 
 @Component({
-  standalone: true,
-  selector: 'cdt-navbar',
+  selector: 'mfa-navbar',
   templateUrl: './navbar.component.html',
   imports: [RouterModule],
   changeDetection: ChangeDetectionStrategy.OnPush,

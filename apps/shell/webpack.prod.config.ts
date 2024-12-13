@@ -1,4 +1,4 @@
-import { withModuleFederation } from '@nx/angular/module-federation';
+import { withModuleFederation } from '@nx/module-federation/angular';
 import config from './module-federation.config';
 
 /**
@@ -20,5 +20,5 @@ export default withModuleFederation(
      * ]
      */
   },
-  { dts: false }
+  { dts: false },
 );

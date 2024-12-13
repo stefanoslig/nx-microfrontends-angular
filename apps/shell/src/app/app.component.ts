@@ -5,9 +5,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 
 @Component({
-  standalone: true,
   imports: [FooterComponent, NavbarComponent, RouterModule],
-  selector: 'app-root',
+  selector: 'app-shell',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

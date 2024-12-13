@@ -5,8 +5,7 @@ import { RouterLink } from '@angular/router';
 import { AuthStoreService } from '@nx-microfrontends-angular/auth-data-access';
 
 @Component({
-  standalone: true,
-  selector: 'cdt-login',
+  selector: 'mfa-login',
   templateUrl: './login.component.html',
   imports: [ListErrorsComponent, RouterLink, ReactiveFormsModule, InputErrorsComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,

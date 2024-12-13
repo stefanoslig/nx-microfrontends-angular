@@ -1,9 +1,6 @@
-<cdt-navbar
-  [isLoggedIn]="authStore.loggedIn()"
-  [user]="authStore.user()"
-></cdt-navbar>
+<mfa-navbar [isLoggedIn]="authStore.loggedIn()" [user]="authStore.user()"></mfa-navbar>
 <router-outlet></router-outlet>
 
 @defer (on idle) {
-<cdt-footer></cdt-footer>
+<mfa-footer></mfa-footer>
 }

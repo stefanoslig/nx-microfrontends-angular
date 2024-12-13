@@ -5,8 +5,7 @@ import { AuthStoreService } from '@nx-microfrontends-angular/auth-data-access';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
-  standalone: true,
-  selector: 'cdt-register',
+  selector: 'mfa-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
   imports: [ListErrorsComponent, RouterModule, ReactiveFormsModule, InputErrorsComponent],

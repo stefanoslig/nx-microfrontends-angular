@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, OnDestroy, inject } from '@angular/
 
 @Component({
   standalone: true,
-  selector: 'cdt-list-errors',
+  selector: 'mfa-list-errors',
   templateUrl: './list-errors.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

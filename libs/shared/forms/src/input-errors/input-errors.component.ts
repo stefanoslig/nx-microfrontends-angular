@@ -5,8 +5,7 @@ import { ErrorMapperPipe } from './error-mapper-pipe';
 import { IsErrorVisibleDirective } from './is-error-visible.directive';
 
 @Component({
-  standalone: true,
-  selector: 'cdt-input-errors',
+  selector: 'mfa-input-errors',
   templateUrl: './input-errors.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [KeyValuePipe, ErrorMapperPipe, IsErrorVisibleDirective],
